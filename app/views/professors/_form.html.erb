@@ -1,0 +1,73 @@
+<%= form_for(@professor) do |f| %>
+  <% if @professor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@professor.errors.count, "error") %> prohibited this professor from being saved:</h2>
+
+      <ul>
+      <% @professor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :login %><br>
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br>
+    <%= f.text_field :senha %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br>
+    <%= f.text_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :fone1 %><br>
+    <%= f.text_field :fone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :fone2 %><br>
+    <%= f.text_field :fone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :logradouro %><br>
+    <%= f.text_field :logradouro %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :uf %><br>
+    <%= f.text_field :uf %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br>
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :valorHoraAula %><br>
+    <%= f.text_field :valorHoraAula %>
+  </div>
+  <div class="field">
+    <%= f.label :qtdvotos %><br>
+    <%= f.number_field :qtdvotos %>
+  </div>
+  <div class="field">
+    <%= f.label :qtdpontos %><br>
+    <%= f.number_field :qtdpontos %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

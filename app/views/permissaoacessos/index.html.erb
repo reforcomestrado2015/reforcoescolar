@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Permissaoacessos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @permissaoacessos.each do |permissaoacesso| %>
+      <tr>
+        <td><%= permissaoacesso.descricao %></td>
+        <td><%= link_to 'Show', permissaoacesso %></td>
+        <td><%= link_to 'Edit', edit_permissaoacesso_path(permissaoacesso) %></td>
+        <td><%= link_to 'Destroy', permissaoacesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Permissaoacesso', new_permissaoacesso_path %>

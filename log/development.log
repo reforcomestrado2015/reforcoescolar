@@ -1,0 +1,437 @@
+
+
+Started GET "/" for 150.161.2.202 at 2015-06-19 13:49:06 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 39ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (13.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (22.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProfessors (20150619135223)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "email" varchar, "senha" varchar, "nome" varchar, "cpf" varchar, "fone1" varchar, "fone2" varchar, "logradouro" varchar, "cidade" varchar, "uf" varchar, "cep" varchar, "valorHoraAula" float, "qtdvotos" integer, "qtdpontos" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_professors_on_login" ON "professors" ("login")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_login' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_professors_on_email" ON "professors" ("email")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150619135223"]]
+  [1m[36m (18.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_login' AND type='index'
+
+
+
+Started GET "/" for 150.161.2.202 at 2015-06-19 13:54:49 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 23ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professors" for 150.161.2.202 at 2015-06-19 13:54:54 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#index as HTML
+  [1m[35mProfessor Load (0.3ms)[0m  SELECT "professors".* FROM "professors"
+  Rendered professors/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1022ms (Views: 1018.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/professors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-ade00adcde1249df4241695c2aae67a1990b158fa2c1ae5aedad5425292b1a62.css?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/professors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 150.161.2.202 at 2015-06-19 13:54:56 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/professors/new" for 150.161.2.202 at 2015-06-19 13:54:59 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#new as HTML
+  Rendered professors/_form.html.erb (73.9ms)
+  Rendered professors/new.html.erb within layouts/application (85.5ms)
+Completed 200 OK in 177ms (Views: 145.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 150.161.2.202 at 2015-06-19 13:55:34 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professor" for 150.161.2.202 at 2015-06-19 13:55:45 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/professor"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:29:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.5ms)
+
+
+Started GET "/professors" for 150.161.2.202 at 2015-06-19 13:55:47 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#index as HTML
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors"
+  Rendered professors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 245ms (Views: 239.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professors/new" for 150.161.2.202 at 2015-06-19 13:55:53 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#new as HTML
+  Rendered professors/_form.html.erb (24.4ms)
+  Rendered professors/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 121ms (Views: 103.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/professors" for 150.161.2.202 at 2015-06-19 13:56:21 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOSa534VSModw5rtChhRXIDIQxkBln02zxKxurbtegPCS5RJhmFaLKXajvQMdlbzLF6uByCcnhVCmKxXukUW7Q==", "professor"=>{"login"=>"professor1", "email"=>"jhmarques3@gmail.com", "senha"=>"123456", "nome"=>"professor1", "cpf"=>"00000000000", "fone1"=>"0000000000", "fone2"=>"0000000000", "logradouro"=>"rua recife", "cidade"=>"recife", "uf"=>"pe", "cep"=>"50000000", "valorHoraAula"=>"10", "qtdvotos"=>"0", "qtdpontos"=>"0"}, "commit"=>"Create Professor"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "professors" ("login", "email", "senha", "nome", "cpf", "fone1", "fone2", "logradouro", "cidade", "uf", "cep", "valorHoraAula", "qtdvotos", "qtdpontos", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["login", "professor1"], ["email", "jhmarques3@gmail.com"], ["senha", "123456"], ["nome", "professor1"], ["cpf", "00000000000"], ["fone1", "0000000000"], ["fone2", "0000000000"], ["logradouro", "rua recife"], ["cidade", "recife"], ["uf", "pe"], ["cep", "50000000"], ["valorHoraAula", 10.0], ["qtdvotos", 0], ["qtdpontos", 0], ["created_at", "2015-06-19 13:56:21.476502"], ["updated_at", "2015-06-19 13:56:21.476502"]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://reforcoescolar-jhdavino.c9.io/professors/1
+Completed 302 Found in 29ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/professors/1" for 150.161.2.202 at 2015-06-19 13:56:21 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered professors/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 72ms (Views: 53.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors" for 150.161.2.202 at 2015-06-19 13:56:24 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#index as HTML
+  [1m[36mProfessor Load (0.4ms)[0m  [1mSELECT "professors".* FROM "professors"[0m
+  Rendered professors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 85ms (Views: 82.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professors" for 150.161.2.202 at 2015-06-19 13:56:29 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfessorsController#index as HTML
+  [1m[35mProfessor Load (0.4ms)[0m  SELECT "professors".* FROM "professors"
+  Rendered professors/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAlunos (20150619135718)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "alunos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "email" varchar, "senha" varchar, "nome" varchar, "cpf" varchar, "fone1" varchar, "fone2" varchar, "logradouro" varchar, "cidade" varchar, "uf" varchar, "cep" varchar, "escola" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_alunos_on_login" ON "alunos" ("login")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_login' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_alunos_on_email" ON "alunos" ("email")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150619135718"]]
+  [1m[36m (14.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_login' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_login' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDisciplinas (20150619135755)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "serie" varchar, "nivel" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150619135755"]]
+  [1m[36m (13.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_login' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_login' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePermissaoacessos (20150619135821)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "permissaoacessos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150619135821"]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_alunos_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_alunos_on_login' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_professors_on_login' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_professors_on_login' AND type='index'
+
+
+
+Started GET "/alunos" for 150.161.2.202 at 2015-06-19 14:11:51 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AlunosController#index as HTML
+  [1m[35mAluno Load (0.5ms)[0m  SELECT "alunos".* FROM "alunos"
+  Rendered alunos/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 465ms (Views: 449.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/disciplinas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/alunos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/alunos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/permissaoacessos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/disciplinas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/permissaoacessos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 150.161.2.202 at 2015-06-19 14:11:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/alunos/new" for 150.161.2.202 at 2015-06-19 14:11:54 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlunosController#new as HTML
+  Rendered alunos/_form.html.erb (66.2ms)
+  Rendered alunos/new.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 218ms (Views: 173.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/alunos" for 150.161.2.202 at 2015-06-19 14:13:52 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlunosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6KoqwwRKrsEedRRChVNngr8U9/gIwG4ph8shDXyqgumGBSRt/D68J6ZsAFuDPWAtE4Ia5inKjQoKQTzgcALuBw==", "aluno"=>{"login"=>"aluno1", "email"=>"jhmd@cin.ufpe.br", "senha"=>"123456", "nome"=>"jh davino", "cpf"=>"00000000000", "fone1"=>"0000000", "fone2"=>"0000000", "logradouro"=>"varzea", "cidade"=>"recife", "uf"=>"pe", "cep"=>"50000000", "escola"=>"aplicacao"}, "commit"=>"Create Aluno"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "alunos" ("login", "email", "senha", "nome", "cpf", "fone1", "fone2", "logradouro", "cidade", "uf", "cep", "escola", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["login", "aluno1"], ["email", "jhmd@cin.ufpe.br"], ["senha", "123456"], ["nome", "jh davino"], ["cpf", "00000000000"], ["fone1", "0000000"], ["fone2", "0000000"], ["logradouro", "varzea"], ["cidade", "recife"], ["uf", "pe"], ["cep", "50000000"], ["escola", "aplicacao"], ["created_at", "2015-06-19 14:13:52.957881"], ["updated_at", "2015-06-19 14:13:52.957881"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://reforcoescolar-jhdavino.c9.io/alunos/1
+Completed 302 Found in 26ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/alunos/1" for 150.161.2.202 at 2015-06-19 14:13:53 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlunosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAluno Load (0.4ms)[0m  SELECT  "alunos".* FROM "alunos" WHERE "alunos"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered alunos/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 100ms (Views: 84.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/alunos" for 150.161.2.202 at 2015-06-19 14:13:55 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AlunosController#index as HTML
+  [1m[36mAluno Load (0.3ms)[0m  [1mSELECT "alunos".* FROM "alunos"[0m
+  Rendered alunos/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/permissaoacessos" for 150.161.2.202 at 2015-06-19 14:14:04 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermissaoacessosController#index as HTML
+  [1m[35mPermissaoacesso Load (0.2ms)[0m  SELECT "permissaoacessos".* FROM "permissaoacessos"
+  Rendered permissaoacessos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 74ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/permissaoacessos/new" for 150.161.2.202 at 2015-06-19 14:14:06 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermissaoacessosController#new as HTML
+  Rendered permissaoacessos/_form.html.erb (3.8ms)
+  Rendered permissaoacessos/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 84ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/permissaoacessos" for 150.161.2.202 at 2015-06-19 14:14:13 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermissaoacessosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RWm8I/9h4ztTT12i3SYmQjzIRUvaqXASrRNg4K/vaxkrxrKNBxXx3etWSbvbSCHtkF6oVfujkzEgmX0No0cH9w==", "permissaoacesso"=>{"descricao"=>"permissao 1"}, "commit"=>"Create Permissaoacesso"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "permissaoacessos" ("descricao", "created_at", "updated_at") VALUES (?, ?, ?)  [["descricao", "permissao 1"], ["created_at", "2015-06-19 14:14:13.987254"], ["updated_at", "2015-06-19 14:14:13.987254"]]
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://reforcoescolar-jhdavino.c9.io/permissaoacessos/1
+Completed 302 Found in 19ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/permissaoacessos/1" for 150.161.2.202 at 2015-06-19 14:14:14 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermissaoacessosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPermissaoacesso Load (0.3ms)[0m  SELECT  "permissaoacessos".* FROM "permissaoacessos" WHERE "permissaoacessos"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered permissaoacessos/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 93ms (Views: 89.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/permissaoacessos" for 150.161.2.202 at 2015-06-19 14:14:15 +0000
+Cannot render console from 150.161.2.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PermissaoacessosController#index as HTML
+  [1m[36mPermissaoacesso Load (0.3ms)[0m  [1mSELECT "permissaoacessos".* FROM "permissaoacessos"[0m
+  Rendered permissaoacessos/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.3ms)

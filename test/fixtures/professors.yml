@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  login: MyString
+  email: MyString
+  senha: MyString
+  nome: MyString
+  cpf: MyString
+  fone1: MyString
+  fone2: MyString
+  logradouro: MyString
+  cidade: MyString
+  uf: MyString
+  cep: MyString
+  valorHoraAula: 1.5
+  qtdvotos: 1
+  qtdpontos: 1
+
+two:
+  login: MyString
+  email: MyString
+  senha: MyString
+  nome: MyString
+  cpf: MyString
+  fone1: MyString
+  fone2: MyString
+  logradouro: MyString
+  cidade: MyString
+  uf: MyString
+  cep: MyString
+  valorHoraAula: 1.5
+  qtdvotos: 1
+  qtdpontos: 1
