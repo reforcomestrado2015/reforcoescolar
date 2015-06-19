@@ -1,0 +1,3 @@
+Galera esse link irá nos ajudar a utlizar o git via linha de comando.
+
+http://rogerdudler.github.io/git-guide/index.pt_BR.html
