@@ -17,8 +17,8 @@
       <th>Uf</th>
       <th>Cep</th>
       <th>Valorhoraaula</th>
-      <th>Qtdvotos</th>
-      <th>Qtdpontos</th>
+      <!--th>Qtdvotos</th-->
+      <!--th>Qtdpontos</th-->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@
       <tr>
         <td><%= professor.login %></td>
         <td><%= professor.email %></td>
-        <td><%= professor.senha %></td>
+        <td><%#= professor.senha %>*******</td>
         <td><%= professor.nome %></td>
         <td><%= professor.cpf %></td>
         <td><%= professor.fone1 %></td>
@@ -38,8 +38,8 @@
         <td><%= professor.uf %></td>
         <td><%= professor.cep %></td>
         <td><%= professor.valorHoraAula %></td>
-        <td><%= professor.qtdvotos %></td>
-        <td><%= professor.qtdpontos %></td>
+        <!--td><%#= professor.qtdvotos %></td-->
+        <!--td><%#= professor.qtdpontos %></td-->
         <td><%= link_to 'Show', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
         <td><%= link_to 'Destroy', professor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
