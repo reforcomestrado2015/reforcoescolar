@@ -3,6 +3,13 @@ Rails.application.routes.draw do
   resources :disciplinas
   resources :alunos
   resources :professors
+
+  get     'sign_in' => 'sessions#new' 
+  post    'sign_in' => 'sessions#create' 
+  delete 'sign_out' => 'sessions#destroy'
+  root 'sessions#new'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,46 @@
+<h1>Acesso ao Sistema</h1>
+<%= form_for :session, url: sign_in_path do |f| %> 
+
+
+<% if flash.any? %>
+
+<% if flash[:error] -%>
+<div id="error_explanation">
+    <h2>Error</h2>
+    <ul>
+        <li><%= flash[:error] %></li>
+    </ul>
+</div>
+<% end -%>
+
+<% if flash[:notice] -%>
+    <p id="notice" ><%= flash[:notice] %></p>
+<% end -%>
+    
+<% flash.clear %>
+<% end %>
+
+
+
+<div class="field"> 
+    <%= f.label :login %><br /> 
+    <%= f.text_field :login, autofocus: true %> 
+</div> 
+<div class="field"> 
+    <%#= f.label :password %>
+    <label for="session_password">Senha</label><br />
+    <%= f.password_field :password, autocomplete: "off" %> 
+</div> 
+
+<div class="field"> 
+    <label for="session_tipo_acesso">Acessar Como:</label><br/>
+    <%= f.radio_button :tipo_acesso, 'A', :checked => true, :class => 'form-control radio-inline' %> Aluno
+    <%= f.radio_button :tipo_acesso, 'P', :class => 'form-control radio-inline' %>Professor
+</div>
+
+<div class="actions"> <%= f.submit "Entrar" %> </div> 
+<br/>
+<p>Seja um aluno, <%= link_to "cadastre-se agora!",  new_aluno_path %></p> 
+<p>Seja um professor, <%= link_to "cadastre-se agora!",  new_professor_path %></p> 
+
+<% end %>

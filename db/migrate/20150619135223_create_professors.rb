@@ -3,7 +3,7 @@ class CreateProfessors < ActiveRecord::Migration
     create_table :professors do |t|
       t.string :login
       t.string :email
-      t.string :senha
+      t.string :password
       t.string :nome
       t.string :cpf
       t.string :fone1

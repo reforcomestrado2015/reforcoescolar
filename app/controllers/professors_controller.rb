@@ -1,6 +1,12 @@
 class ProfessorsController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
 
+  #permite controlar o acesso nao autorizado de outros usuarios para edicao, remocao e listagem. 
+  before_action :authorize, except: [:new, :create]
+  # esse controle impede que outros usuarios tente editar o cadastro q nao seja dele
+  before_action :correct_user?, only: [:edit, :update, :destroy]
+
+
   # GET /professors
   # GET /professors.json
   def index
@@ -69,6 +75,6 @@ class ProfessorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professor_params
-      params.require(:professor).permit(:login, :email, :senha, :nome, :cpf, :fone1, :fone2, :logradouro, :cidade, :uf, :cep, :valorHoraAula, :qtdvotos, :qtdpontos)
+      params.require(:professor).permit(:login, :email, :password, :nome, :cpf, :fone1, :fone2, :logradouro, :cidade, :uf, :cep, :valorHoraAula, :qtdvotos, :qtdpontos)
     end
 end

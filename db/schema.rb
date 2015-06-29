@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619135821) do
+ActiveRecord::Schema.define(version: 20150628210638) do
 
   create_table "alunos", force: :cascade do |t|
     t.string   "login"
     t.string   "email"
-    t.string   "senha"
+    t.string   "password"
     t.string   "nome"
     t.string   "cpf"
     t.string   "fone1"
@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(version: 20150619135821) do
     t.string   "uf"
     t.string   "cep"
     t.string   "escola"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   add_index "alunos", ["email"], name: "index_alunos_on_email", unique: true
@@ -50,7 +51,7 @@ ActiveRecord::Schema.define(version: 20150619135821) do
   create_table "professors", force: :cascade do |t|
     t.string   "login"
     t.string   "email"
-    t.string   "senha"
+    t.string   "password"
     t.string   "nome"
     t.string   "cpf"
     t.string   "fone1"
@@ -62,8 +63,9 @@ ActiveRecord::Schema.define(version: 20150619135821) do
     t.float    "valorHoraAula"
     t.integer  "qtdvotos"
     t.integer  "qtdpontos"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
   end
 
   add_index "professors", ["email"], name: "index_professors_on_email", unique: true
