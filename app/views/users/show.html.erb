@@ -1,0 +1,33 @@
+<article class="room">
+  <h1 class="room-description">
+      <%= t '.title', user_name: @user.full_name %>
+  </h1>
+
+
+
+  <div class="room-description">
+    <%= link_to(
+          image_tag(@user.picture.thumb.url),
+          @user.picture_url
+        ) if @user.picture? %>
+
+    
+    <p>
+      <%= t '.location', location: @user.location %><br/>
+      <%= t '.bio', bio: @user.bio %><br/>
+      <%= t '.email', email: @user.email %><br/>
+    </p>
+  </div>
+
+
+
+  <% if user_signed_in?&&@user==current_user %>
+    <ul class="room-description">
+      <li>    <%= link_to t('.edit'), edit_user_path(@user) %></li>
+    </ul>
+  <% else %>
+    <ul class="room-description">
+      <li></li>
+    </ul>
+  <% end %>
+</article>

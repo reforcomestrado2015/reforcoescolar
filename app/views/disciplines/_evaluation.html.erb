@@ -1,0 +1,16 @@
+<section class="evaluation">
+  <% if discipline.show_form? %>
+    <%= render partial: 'evaluation_form', locals: {discipline: discipline} %>
+  <% else %>
+    <% discipline.stars.times do %>
+      <%= fa_icon 'star' %>
+    <% end %>
+
+    <% (discipline.evaluation_points.max - discipline.stars).times do %>
+      <%= fa_icon 'star-o' %>
+    <% end %>
+
+
+    <%= t '.stats', count: discipline.total_evaluations %> 
+  <% end %>
+</section>

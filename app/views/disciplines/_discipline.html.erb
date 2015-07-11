@@ -1,0 +1,41 @@
+<article class="discipline">
+  <h2 class="discipline-description">
+    <%= link_to highlight(discipline.title, @search_query), discipline.route %>
+  </h2>
+
+  <%= render partial: 'evaluation', locals: {discipline: discipline} %>
+
+  <div class="discipline-description">
+    <%= link_to(
+          image_tag(discipline.thumb_url),
+          discipline.picture_url
+        ) if discipline.has_picture? %>
+
+    <p><%= highlight(discipline.description || '', @search_query) %></p>
+  </div>
+
+  <% if belongs_to_user(discipline) %>
+    <ul class="discipline-description">
+      <li><%= link_to t('.edit'), edit_discipline_path(discipline.route) %></li>
+      <li><%= link_to t('.destroy'), discipline_path(discipline.route),
+        method: :delete, 
+        data: {confirm: t('dialogs.destroy')} %>
+      </li>
+    </ul>
+  <% else %>
+    <ul class="discipline-description">
+      <li></li>
+      <li></li>
+    </ul>
+  <% end %>
+</article>
+
+
+
+
+
+
+
+
+
+

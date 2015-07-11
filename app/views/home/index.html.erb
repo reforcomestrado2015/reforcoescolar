@@ -1,0 +1,37 @@
+
+
+<h1>Disciplinas de reforço recém postadas</h1>
+
+
+
+
+
+
+<% @rooms.each do |room| %>
+
+<article class="room">
+  <h1 class="room-description">
+    <%= link_to room.complete_name, room %> <%= link_to highlight(room.user_information, @search_query), user_path(room.user) %><br/>
+  </h1>
+  
+  <div class="room-description">
+    
+    <%= link_to(
+      image_tag(room.user.picture.thumb.url),
+      room.user.picture.url
+      
+    ) if room.user.picture? %>
+    <p>  
+      <%= link_to room.description, room %>
+    </p>
+    
+  </div>
+  
+  <ul class="room-description">
+      <li></li>
+      <li></li>
+  </ul>
+    
+</article>
+
+<% end %>

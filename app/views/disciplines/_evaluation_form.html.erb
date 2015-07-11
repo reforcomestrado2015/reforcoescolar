@@ -1,0 +1,16 @@
+<% if discipline.can_evaluation? %>
+  <%= form_for discipline.evaluation_route, remote: true do |f| %>
+    <% discipline.evaluation_points.each do |point| %>
+      <%= f.radio_button :points, point  %>
+      <%= f.label :points, value: point do %>
+        <%= fa_icon 'star' %>
+      <% end %>
+    <% end %>
+
+    <%= f.submit %>
+  <% end %>
+<% else %>
+  <span class="login_required">
+    <%= t('.login_to_evaluation') %>
+  </span>
+<% end %>
