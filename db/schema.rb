@@ -11,64 +11,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628210638) do
+ActiveRecord::Schema.define(version: 20150718180046) do
 
-  create_table "alunos", force: :cascade do |t|
-    t.string   "login"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "disciplines", force: true do |t|
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "evaluations_count"
+    t.string   "slug"
+    t.string   "picture"
+  end
+
+  add_index "disciplines", ["slug"], name: "index_disciplines_on_slug", unique: true, using: :btree
+  add_index "disciplines", ["user_id"], name: "index_disciplines_on_user_id", using: :btree
+
+  create_table "evaluations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "discipline_id"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "evaluations", ["discipline_id"], name: "index_evaluations_on_discipline_id", using: :btree
+  add_index "evaluations", ["user_id", "discipline_id"], name: "index_evaluations_on_user_id_and_discipline_id", unique: true, using: :btree
+  add_index "evaluations", ["user_id"], name: "index_evaluations_on_user_id", using: :btree
+
+  create_table "friendly_id_slugs", force: true do |t|
+    t.string   "slug",                      null: false
+    t.integer  "sluggable_id",              null: false
+    t.string   "sluggable_type", limit: 50
+    t.string   "scope"
+    t.datetime "created_at"
+  end
+
+  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "reviews", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "room_id"
+    t.integer  "points"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reviews", ["room_id"], name: "index_reviews_on_room_id", using: :btree
+  add_index "reviews", ["user_id", "room_id"], name: "index_reviews_on_user_id_and_room_id", unique: true, using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
+
+  create_table "rooms", force: true do |t|
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "reviews_count"
+    t.string   "slug"
+    t.string   "picture"
+  end
+
+  add_index "rooms", ["slug"], name: "index_rooms_on_slug", unique: true, using: :btree
+  add_index "rooms", ["user_id"], name: "index_rooms_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "full_name"
     t.string   "email"
-    t.string   "password"
-    t.string   "nome"
-    t.string   "cpf"
-    t.string   "fone1"
-    t.string   "fone2"
-    t.string   "logradouro"
-    t.string   "cidade"
-    t.string   "uf"
-    t.string   "cep"
-    t.string   "escola"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "location"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "password_digest"
+    t.datetime "confirmed_at"
+    t.string   "confirmation_token"
+    t.string   "picture"
   end
 
-  add_index "alunos", ["email"], name: "index_alunos_on_email", unique: true
-  add_index "alunos", ["login"], name: "index_alunos_on_login", unique: true
-
-  create_table "disciplinas", force: :cascade do |t|
-    t.string   "nome"
-    t.string   "serie"
-    t.string   "nivel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "permissaoacessos", force: :cascade do |t|
-    t.string   "descricao"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "professors", force: :cascade do |t|
-    t.string   "login"
-    t.string   "email"
-    t.string   "password"
-    t.string   "nome"
-    t.string   "cpf"
-    t.string   "fone1"
-    t.string   "fone2"
-    t.string   "logradouro"
-    t.string   "cidade"
-    t.string   "uf"
-    t.string   "cep"
-    t.float    "valorHoraAula"
-    t.integer  "qtdvotos"
-    t.integer  "qtdpontos"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-  end
-
-  add_index "professors", ["email"], name: "index_professors_on_email", unique: true
-  add_index "professors", ["login"], name: "index_professors_on_login", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
