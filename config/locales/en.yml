@@ -21,29 +21,3 @@
 
 en:
   hello: "Hello world"
-
-# Nova parte:
-user_sessions:
-    new:
-    title: 'Login'
-    sign_up: 'Cadastre-se'
-
-signup:
-confirm_email:
-#..
-
-# Adicione:
-activemodel:
-    attributes:
-        user_session:
-            login: Login
-            senha: Senha
-    errors:
-        messages:
-            invalid_login: 'Usuário ou senha inválidos'
-
-helpers:
-    submit:
-        user_session:
-            create: 'Entrar'
-
