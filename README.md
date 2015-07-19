@@ -1,24 +1,23 @@
+RecomendaReforço.net
+==========
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+[RecomendaReforco.net](RecomendaReforco.net) é uma aplicação que construímos para recomendar professores de aula de reforço com base nas disciplinas lecionadas 
+pelo professor [Foi usado Ruby On Rails](http://recomendareforco.net/disciplines/)!
 
+Essa versão do código é para o Rails 4.1. [rails-4.1]
+(https://github.com/vinibaggio/colcho.net/tree/rails-4.0).
 
-Welcome to your Rails project on Cloud9 IDE!
+Licença
+=======
+O [recomendareforco.net](RecomendaReforco.net) é distribuído sob a licença MIT:
 
-To get started, just do the following:
+www.opensource.org/licenses/MIT
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://reforcoescolar-jhdavino.c9.io/).
+Necessario instalar o 
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+sudo apt-get install libmagickwand-dev
+gem install rmagick
+sudo apt-get install libmagick9-dev ruby2.2-dev
+sudo apt-get install libmagick9-dev ruby2.2.1-dev
+sudo apt-get install imagemagick
+sudo gem install rmagick
