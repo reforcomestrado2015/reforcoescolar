@@ -1,0 +1,154 @@
+pt:
+  general:
+    form_error: Há erros no formulário, por favor verifique.
+  
+  layout:
+    disciplines: Disciplinas
+    rooms: Disciplinas
+    signup: Cadastro
+    new_discipline: Cadastre uma disciplina de reforço!
+    new_room: Cadastre uma disciplina de reforço!
+    signup: Cadastro
+    signin: Login
+    my_profile: Meu perfil
+    signout: Logout
+
+  flash:
+    alert:
+      needs_login: "Você precisa estar logado para continuar"
+    notice:
+      signed_in: 'Login efetuado com sucesso!'
+      signed_out: 'Logout efetuado com sucesso. Até logo!'
+      already_logged_in: "Você já está logado."
+      room_created: 'Disciplina criada com sucesso!'
+      room_updated: 'Disciplina atualizada com sucesso!'
+      discipline_created: 'Disciplina criada com sucesso!'
+      discipline_updated: 'Disciplina atualizada com sucesso!'
+  signup:
+    confirm_email:
+      subject: 'RecomendaReforço.net - Confirme seu email'
+      title: 'Seja bem vindo ao RecomendaReforço.net!'
+      body: |
+          Seja bem vindo ao RecomendaReforço.net, %{full_name}.
+          O RecomendaReforço.net é o lugar ideal para você recomendar e encontrar
+          bons professores de aulas de reforço particular.
+
+      confirm_link_html: 'Para você começar a usar o site, acesse o 
+              link: %{link}'
+      thanks_html: 'Obrigado por se cadastrar no %{link}.'
+
+  confirmations:
+    success: Email confirmado com sucesso, obrigado!
+
+  dialogs:
+    destroy: 'Você tem certeza que quer remover?'
+    
+  users:
+    new:
+      title: Cadastro
+    edit:
+      title: Editar perfil
+    show:
+      title: "Perfil: %{user_name}"
+      edit: 'Editar meu perfil'
+      location: "Localização: %{location}"
+      bio: "Bio: %{bio}"
+      email: "Email: %{email}"
+  user_sessions:
+    new:
+      title: 'Login'
+      sign_up: 'Cadastre-se'
+  disciplines:
+    new:
+      title: 'Cadastro de disciplina'
+    edit:
+      title: 'Editando disciplina'
+    index:
+      title: 'Disciplinas Disponíveis'
+      search_results: 'Resultados da busca'
+    search:
+      search_for: 'Buscar por...'
+    discipline:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
+    evaluation_form:
+        login_to_evaluation: 'Faça o login para avaliar disciplinas de reforço'
+    evaluation:
+        stats:
+          zero: 'Não há avaliações'
+          one: '%{average}/%{max} (1 avaliação)'
+          other: '%{average}/%{max} (%{count} avaliações)'      
+  rooms:
+    new:
+      title: 'Cadastro de disciplina de reforço'
+    edit:
+      title: 'Editando disciplina de reforço'
+    index:
+      title: 'Disciplinas de reforço disponíveis'
+      search_results: 'Resultados da busca'
+    search:
+      search_for: 'Buscar por...'
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
+    review_form:
+      login_to_review: 'Faça o login para avaliar a disciplina do professor'
+      review:
+        stats:
+          zero: 'Não há avaliações'
+          one: '%{average}/%{max} (1 avaliação)'
+          other: '%{average}/%{max} (%{count} avaliações)'
+    review:
+      login_to_review: 'Faça o login para avaliar a disciplina do professor'
+      stats:
+        one: '(1 avaliação)'
+        other: '(%{count} avaliações)'
+    evaluation:
+      login_to_evaluation: 'Faça o login para avaliar o professor da disciplina'
+      stats:
+        one: '(1 avaliação)'
+        other: '(%{count} avaliações)'    
+
+  links:
+    back: Voltar
+
+  activerecord:
+    models:
+      discipline: Disciplina
+      room: Disciplina
+      user: Usuario
+    attributes:
+      user:
+        bio: Biografia
+        email: Email
+        full_name: Nome completo
+        location: Localização
+        password: Senha
+        password_confirmation: Confirme sua senha
+        picture: Foto
+      room:
+        description: Descrição
+        location: Localização
+        title: Título
+        picture: Foto
+      discipline:
+        description: Descrição
+        location: Localização
+        title: Título
+        picture: Foto
+  activemodel:
+    attributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'
+
