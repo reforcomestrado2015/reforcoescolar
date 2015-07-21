@@ -7,11 +7,11 @@ default: &default
 
 development:
   <<: *default
-  database: colchonet_development
+  database: recomendareforco_development
 test:
   <<: *default
-  database: colchonet_test
+  database: recomendareforco_test
 
 production:
   <<: *default
-  database: colchonet_production
+  database: recomendareforco_production
