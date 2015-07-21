@@ -16,11 +16,7 @@ www.opensource.org/licenses/MIT
 Necessario instalar o:
 
 - sudo apt-get install libmagickwand-dev
-- gem install rmagick
-- sudo apt-get install libmagick9-dev ruby2.2-dev
-- sudo apt-get install libmagick9-dev ruby2.2.1-dev
 - sudo apt-get install imagemagick
-- sudo gem install rmagick
 - sudo service postgresql start
 
 Deve-se também mudar a senha padrão do usuario postgres para 12345 e criar o banco de dados padrão usando os comandos abaixo:
@@ -28,10 +24,11 @@ Deve-se também mudar a senha padrão do usuario postgres para 12345 e criar o b
  - sudo passwd postgres 
  - su postgres
  - psql -c "ALTER USER postgres WITH PASSWORD '12345'" -d template1 
-   psql -c "create database recomendareforco_development " 
+ - psql -c "create database recomendareforco_development " 
  - exit
 
 
 Por ultimo rodar o comando:
 
-rake db:migrate
+ - bundle install
+ - rake db:migrate
