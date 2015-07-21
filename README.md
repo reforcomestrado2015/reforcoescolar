@@ -4,7 +4,7 @@ RecomendaReforço.net
 [RecomendaReforco.net](RecomendaReforco.net) é uma aplicação que construímos para recomendar professores de aula de reforço com base nas disciplinas lecionadas 
 pelo professor [Foi usado Ruby On Rails](http://recomendareforco.net/disciplines/)!
 
-Essa versão do código é para o Rails 4.1.  [rails-4.1]
+Essa versão do código é para o Rails 4.1. [rails-4.1]
 (https://github.com/reforcomestrado2015/reforcoescolar).
 
 Licença
@@ -23,6 +23,15 @@ Necessario instalar o:
 - sudo gem install rmagick
 - sudo service postgresql start
 
-Deve-se também mudar a senha padrão do usuario postgres para 12345 usando o comando abaixo:
+Deve-se também mudar a senha padrão do usuario postgres para 12345 e criar o banco de dados padrão usando os comandos abaixo:
 
  - sudo passwd postgres 
+ - su postgres
+ - psql -c "ALTER USER postgres WITH PASSWORD '12345'" -d template1 
+   psql -c "create database recomendareforco_development " 
+ - exit
+
+
+Por ultimo rodar o comando:
+
+rake db:migrate
