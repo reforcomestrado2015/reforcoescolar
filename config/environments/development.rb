@@ -36,7 +36,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
  
   config.action_mailer.default_url_options = {
-    host: "colcho-net-wiltonmoreirajr.c9.io"
+    host: "recomendareforco-wiltonmoreirajr.c9.io"
     #host: "colcho-net-wiltonmoreirajr.c9.io"
     #host: "localhost:3000"
   }
@@ -44,7 +44,7 @@ Rails.application.configure do
 #  config.action_mailer.delivery_method = :smtp
 #  config.action_mailer.smtp_settings = {
 ##    #address: "localhost",
-#    #address: "colcho-net-wiltonmoreirajr.c9.io",
+#    #address: "recomendareforco-wiltonmoreirajr.c9.io",
 #    address: "rails-intro-wiltonmoreirajr.c9.io",
 #    
 #    port: 1025
@@ -57,8 +57,8 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'gmail.com',
-    :user_name            => '<coloque seu email do gmail aqui>',
-    :password             => '<coloque sua senha do email da gmail>',
+    :user_name            => 'wsantana3@gmail.com',
+    :password             => 'will@1FLO1',
     :authentication       => 'plain',
     :enable_starttls_auto => true 
   }
