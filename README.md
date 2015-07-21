@@ -4,7 +4,7 @@ RecomendaReforço.net
 [RecomendaReforco.net](RecomendaReforco.net) é uma aplicação que construímos para recomendar professores de aula de reforço com base nas disciplinas lecionadas 
 pelo professor [Foi usado Ruby On Rails](http://recomendareforco.net/disciplines/)!
 
-Essa versão do código é para o Rails 4.1. [rails-4.1]
+Essa versão do código é para o Rails 4.1.  [rails-4.1]
 (https://github.com/reforcomestrado2015/reforcoescolar).
 
 Licença
