@@ -19,12 +19,13 @@ Necessario instalar o:
 - sudo apt-get install imagemagick
 - sudo service postgresql start
 
-Deve-se também mudar a senha padrão do usuario postgres para 12345 e criar o banco de dados padrão usando os comandos abaixo:
+Deve-se também mudar a senha padrão do usuario postgres para o valor 12345 e em seguida criar o banco de dados padrão usando os comandos abaixo:
 
  - sudo passwd postgres 
  - su postgres
+ - infrome a senha: 12345
  - psql -c "ALTER USER postgres WITH PASSWORD '12345'" -d template1 
- - psql -c "create database recomendareforco_development " 
+ - psql -c "create database recomendareforco_development" 
  - exit
 
 
