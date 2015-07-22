@@ -57,8 +57,8 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'gmail.com',
-    :user_name            => 'wsantana3@gmail.com',
-    :password             => 'will@1FLO1',
+    :user_name            => 'reforco.mestrado2015@gmail.com',
+    :password             => 'engenharia12345',
     :authentication       => 'plain',
     :enable_starttls_auto => true 
   }
@@ -66,11 +66,20 @@ Rails.application.configure do
   #necessario ainda desbloquear a sua conta do gmail para o envio de email para isso
   #adicione essa linha logo abaixo para dar permissao ao seu email para que ele envie mensagens
   # http://www.google.com/accounts/DisplayUnlockCaptcha
+
+
+#  config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.smtp_settings = {
+#    :address              => "host.servidor50.info",
+#    :port                 =>  995,
+#    :domain               => 'hardoom.com',
+#    :user_name            => 'recomendareforco@hardoom.com',
+#    :password             => 's3nha123',
+#    :authentication       => 'plain',
+#    :enable_starttls_auto => true 
+#  }
   
-  
-  
-  
-  
+
   
   
   

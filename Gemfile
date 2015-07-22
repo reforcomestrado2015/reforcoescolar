@@ -17,9 +17,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer',  platforms: :ruby
 
-gem 'font-awesome-rails'
-#gem "font-awesome-rails", "~> 4.3.0.0"
-#gem "font-awesome-rails", "~> 3.2.1.3"
+#gem 'font-awesome-rails'
+##gem "font-awesome-rails", "~> 4.3.0.0"
+gem "font-awesome-rails", "~> 3.2.1.3"
 
 gem 'friendly_id', '5.0.3'
 gem 'kaminari'
